@@ -80,7 +80,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 24, rotate: -3 }}
           animate={{ opacity: 1, y: 0, rotate: 0 }}
           transition={{ duration: 0.9, delay: 0.3, ease }}
-          className="group relative mx-auto md:mx-0 w-full max-w-[280px]"
+          className="group relative mx-auto md:mx-0 w-full max-w-[280px] order-first md:order-none"
         >
           <div className="absolute -z-10 inset-0 rounded-full bg-crimson/15 translate-x-3 translate-y-3 transition-transform duration-500 ease-editorial group-hover:translate-x-5 group-hover:translate-y-5" />
 
@@ -99,8 +99,8 @@ export function Hero() {
           </div>
 
           <div className="mt-5 text-center md:text-left">
-            <p className="font-display text-lg text-ink leading-none">{profile.name}</p>
-            <p className="text-xs uppercase tracking-wider2 font-semibold text-warm-gray mt-1">
+            <p className="hidden md:block font-display text-lg text-ink leading-none">{profile.name}</p>
+            <p className="text-xs uppercase tracking-wider2 font-semibold text-warm-gray mt-1 md:mt-1">
               {profile.location}
             </p>
           </div>

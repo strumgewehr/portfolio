@@ -5,6 +5,11 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
+function supportsHover() {
+  if (typeof window === "undefined") return false;
+  return window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+}
+
 export function TiltCard({
   children,
   className,
@@ -29,6 +34,7 @@ export function TiltCard({
   const liftY = useSpring(0, { stiffness: 180, damping: 22 });
 
   function handleMouseMove(e: React.MouseEvent<HTMLDivElement>) {
+    if (!supportsHover()) return;
     const rect = ref.current?.getBoundingClientRect();
     if (!rect) return;
     mx.set((e.clientX - rect.left) / rect.width - 0.5);
@@ -36,6 +42,7 @@ export function TiltCard({
   }
 
   function handleEnter() {
+    if (!supportsHover()) return;
     liftY.set(-8);
   }
 
@@ -51,6 +58,7 @@ export function TiltCard({
       onMouseMove={handleMouseMove}
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
+      onTouchEnd={handleLeave}
       style={{
         rotateX,
         rotateY,

@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const config: Config = {
   content: [
@@ -37,6 +38,17 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // Scope `hover:` and `group-hover:` to devices that truly support hover
+    // (mouse/trackpad). Prevents hover states from getting "stuck" after
+    // a tap on Android/iOS touchscreens.
+    plugin(({ addVariant }) => {
+      addVariant("hover", "@media (hover: hover) and (pointer: fine) { &:hover }");
+      addVariant(
+        "group-hover",
+        "@media (hover: hover) and (pointer: fine) { :merge(.group):hover & }"
+      );
+    }),
+  ],
 };
 export default config;
