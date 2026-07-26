@@ -77,12 +77,12 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.1, ease }}
           className="flex items-center gap-4 mb-8"
         >
-          <div className="relative w-[4.5rem] h-[4.5rem] flex-shrink-0 rounded-full overflow-hidden border-2 border-ivory shadow-paper">
+          <div className="relative w-24 h-24 flex-shrink-0 rounded-full overflow-hidden border-2 border-ivory shadow-paper">
             <Image
               src="/images/garv-sethi-circle.jpg"
               alt="Portrait of Garv Sethi"
               fill
-              sizes="72px"
+              sizes="96px"
               className="object-cover grayscale-[20%] contrast-[1.03]"
               priority
             />
