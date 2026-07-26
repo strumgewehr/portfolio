@@ -22,7 +22,7 @@ export function Contact() {
         <div className="mt-12 flex flex-wrap gap-4">
           <a
             href={`mailto:${profile.email}`}
-            className="inline-flex items-center gap-2 bg-crimson text-cream text-sm font-semibold px-6 py-3 rounded-full hover:bg-crimson-deep transition-colors duration-300 shadow-paper"
+            className="inline-flex items-center gap-2 bg-crimson text-cream text-sm font-semibold px-6 py-3 rounded-full hover:bg-crimson-deep active:bg-crimson-deep active:scale-95 transition-all duration-300 shadow-paper"
           >
             <Mail size={15} /> {profile.email}
           </a>
@@ -30,7 +30,7 @@ export function Contact() {
             href={profile.github}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 border-2 border-ink text-ink text-sm font-semibold px-6 py-3 rounded-full hover:border-crimson hover:text-crimson transition-colors duration-300"
+            className="inline-flex items-center gap-2 border-2 border-ink text-ink text-sm font-semibold px-6 py-3 rounded-full hover:border-crimson hover:text-crimson active:border-crimson active:text-crimson active:scale-95 transition-all duration-300"
           >
             <Github size={15} /> GitHub
           </a>
@@ -38,13 +38,13 @@ export function Contact() {
             href={profile.linkedin}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 border-2 border-ink text-ink text-sm font-semibold px-6 py-3 rounded-full hover:border-crimson hover:text-crimson transition-colors duration-300"
+            className="inline-flex items-center gap-2 border-2 border-ink text-ink text-sm font-semibold px-6 py-3 rounded-full hover:border-crimson hover:text-crimson active:border-crimson active:text-crimson active:scale-95 transition-all duration-300"
           >
             <Linkedin size={15} /> LinkedIn
           </a>
           <a
             href={profile.resumeUrl}
-            className="inline-flex items-center gap-2 border-2 border-ink text-ink text-sm font-semibold px-6 py-3 rounded-full hover:border-crimson hover:text-crimson transition-colors duration-300"
+            className="inline-flex items-center gap-2 border-2 border-ink text-ink text-sm font-semibold px-6 py-3 rounded-full hover:border-crimson hover:text-crimson active:border-crimson active:text-crimson active:scale-95 transition-all duration-300"
           >
             Resume <ArrowUpRight size={15} />
           </a>

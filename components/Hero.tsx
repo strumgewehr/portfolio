@@ -13,7 +13,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-[92vh] flex items-center max-w-editorial mx-auto px-6 md:px-10 pt-32 pb-16 overflow-hidden"
+      className="relative hero-viewport flex items-center max-w-editorial mx-auto px-6 md:px-10 pt-32 pb-16 overflow-hidden"
     >
       <Ornament
         variant="network"
@@ -47,7 +47,7 @@ export function Hero() {
           >
             <a
               href="#projects"
-              className="group inline-flex items-center gap-1.5 bg-crimson text-cream text-sm font-semibold px-6 py-3 rounded-full hover:bg-crimson-deep transition-colors duration-300 ease-editorial shadow-paper"
+              className="group inline-flex items-center gap-1.5 bg-crimson text-cream text-sm font-semibold px-6 py-3 rounded-full hover:bg-crimson-deep active:bg-crimson-deep active:scale-95 transition-all duration-300 ease-editorial shadow-paper"
             >
               View Projects
               <ArrowUpRight
@@ -60,7 +60,7 @@ export function Hero() {
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"
-              className="inline-flex items-center justify-center w-11 h-11 rounded-full border-2 border-ink text-ink hover:border-crimson hover:text-crimson hover:rotate-[8deg] transition-all duration-300 ease-editorial"
+              className="inline-flex items-center justify-center w-12 h-12 rounded-full border-2 border-ink text-ink hover:border-crimson hover:text-crimson hover:rotate-[8deg] active:border-crimson active:text-crimson active:scale-90 transition-all duration-300 ease-editorial"
             >
               <Github size={17} />
             </a>
@@ -69,7 +69,7 @@ export function Hero() {
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
-              className="inline-flex items-center justify-center w-11 h-11 rounded-full border-2 border-ink text-ink hover:border-crimson hover:text-crimson hover:rotate-[8deg] transition-all duration-300 ease-editorial"
+              className="inline-flex items-center justify-center w-12 h-12 rounded-full border-2 border-ink text-ink hover:border-crimson hover:text-crimson hover:rotate-[8deg] active:border-crimson active:text-crimson active:scale-90 transition-all duration-300 ease-editorial"
             >
               <Linkedin size={17} />
             </a>

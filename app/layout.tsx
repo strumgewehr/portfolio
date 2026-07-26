@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 
@@ -15,6 +15,12 @@ const body = Inter({
   variable: "--font-body",
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#F7F3EB",
+};
 
 export const metadata: Metadata = {
   title: "Garv Sethi — AI Engineering & Cybersecurity",

@@ -4,11 +4,41 @@
 
 html {
   scroll-behavior: smooth;
+  /* Prevent Android Chrome from auto-inflating font sizes in landscape/columns */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+html,
+body {
+  /* Guard against any decorative absolutely-positioned element bleeding
+     into a horizontal scrollbar on narrow Android viewports */
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 body {
   background-color: #F7F3EB;
   color: #111111;
+  /* Remove the default gray/blue flash Android shows on every tap;
+     we provide our own :active feedback instead */
+  -webkit-tap-highlight-color: transparent;
+}
+
+a,
+button {
+  /* Removes the ~300ms tap delay on older Android browsers and stops
+     rapid taps from being misread as a double-tap-to-zoom gesture */
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Dynamic-viewport-height hero sizing: falls back to vh, then upgrades to
+   dvh on browsers that support it. Fixes the Android Chrome bug where the
+   hero's height jumps as the address bar shows/hides while scrolling. */
+.hero-viewport {
+  min-height: 92vh;
+  min-height: 92dvh;
 }
 
 ::selection {
@@ -33,8 +63,10 @@ body {
   transform-origin: left;
   transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.link-underline:hover::after {
-  transform: scaleX(1);
+@media (hover: hover) and (pointer: fine) {
+  .link-underline:hover::after {
+    transform: scaleX(1);
+  }
 }
 
 /* Focus visibility for accessibility */

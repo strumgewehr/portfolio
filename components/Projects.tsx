@@ -81,7 +81,7 @@ export function Projects() {
                       href={project.github}
                       target="_blank"
                       rel="noreferrer"
-                      className="group/btn inline-flex items-center justify-center gap-2 text-sm font-semibold border-2 border-ink rounded-full px-5 py-2.5 text-ink hover:border-crimson hover:text-crimson transition-colors duration-300"
+                      className="group/btn inline-flex items-center justify-center gap-2 text-sm font-semibold border-2 border-ink rounded-full px-5 py-2.5 text-ink hover:border-crimson hover:text-crimson active:border-crimson active:text-crimson active:scale-95 transition-all duration-300"
                     >
                       <Github size={15} className="transition-transform duration-300 group-hover/btn:rotate-[10deg]" />
                       Code
@@ -92,7 +92,7 @@ export function Projects() {
                       href={project.demo}
                       target="_blank"
                       rel="noreferrer"
-                      className="group/btn inline-flex items-center justify-center gap-2 text-sm font-semibold bg-crimson text-cream rounded-full px-5 py-2.5 hover:bg-crimson-deep transition-colors duration-300"
+                      className="group/btn inline-flex items-center justify-center gap-2 text-sm font-semibold bg-crimson text-cream rounded-full px-5 py-2.5 hover:bg-crimson-deep active:bg-crimson-deep active:scale-95 transition-all duration-300"
                     >
                       Live Demo
                       <ArrowUpRight size={15} className="transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
